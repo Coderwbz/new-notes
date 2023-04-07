@@ -1,0 +1,22 @@
+/*线性表的单链表存储结构
+*/
+typedef struct Node{
+ElemType data;
+struct Node* next;
+}Node;
+
+
+typedef struct Monster {
+	int id;
+		struct Monster*next;//指向下一个结点的指针
+}Monster;
+void test() {
+	Monster monster1 = { 1,"xiaom" };
+	Monster monster2 = { 2,"xiaob" };
+	Monster monster3 = { 3,"xiaoc" };
+	Monster monster4 = { 4,"xiaod" };
+	//monster1就是头指针
+	monster1.next = &monster2;
+	monster2.next = &monster3;
+	monster3.next = &monster4;
+	monster4.next =NULL;
